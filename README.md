@@ -22,42 +22,41 @@ I learned that Git commits only save staged changes, so checking `git status` an
 ### `git log --oneline`
 
 ```text
-4c57f22 Merge responsive styling improvements
-1793586 Improve responsive styling
-4523740 Merge do not commit safety section
-a6039fa Add do not commit safety section
-93c39f2 Merge command reference section
-03d4935 Add command reference section
-fb81a98 Add initial site styling
-5cd7af2 Add initial field notes page and README
-0dbbf66 Add gitignore for local files
+658762f (HEAD -> main, origin/main, origin/HEAD) Merge pull request #7 from sithusoe19619/feature/responsive-styling
+5edc76c (origin/feature/responsive-styling, feature/responsive-styling) add responsive CSS media query for mobile
+49287a5 Merge pull request #6 from sithusoe19619/feature/do-not-commit-section
+2e5821f (origin/feature/do-not-commit-section, feature/do-not-commit-section) expand do not commit safety section
+a0239f6 (origin/feature/add-command-reference-section, feature/add-command-reference-section) Merge pull request #5 from sithusoe19619/feature/command-reference
+2778aae (origin/feature/command-reference, feature/command-reference) expand command reference section
+4493c2a add initial CSS styles
+814d140 add initial HTML structure and README
+f9e870c add .gitignore with standard exclusions
 ```
 
 ### `git log --oneline --graph --all`
 
 ```text
-*   4c57f22 Merge responsive styling improvements
-|\  
-| * 1793586 Improve responsive styling
-|/  
-*   4523740 Merge do not commit safety section
-|\  
-| * a6039fa Add do not commit safety section
-|/  
-*   93c39f2 Merge command reference section
-|\  
-| * 03d4935 Add command reference section
-|/  
-* fb81a98 Add initial site styling
-* 5cd7af2 Add initial field notes page and README
-* 0dbbf66 Add gitignore for local files
+658762f (HEAD -> main, origin/main, origin/HEAD) Merge pull request #7 from sithusoe19619/feature/responsive-styling
+5edc76c (origin/feature/responsive-styling, feature/responsive-styling) add responsive CSS media query for mobile
+49287a5 Merge pull request #6 from sithusoe19619/feature/do-not-commit-section
+2e5821f (origin/feature/do-not-commit-section, feature/do-not-commit-section) expand do not commit safety section
+a0239f6 (origin/feature/add-command-reference-section, feature/add-command-reference-section) Merge pull request #5 from sithusoe19619/feature/command-reference
+2778aae (origin/feature/command-reference, feature/command-reference) expand command reference section
+4493c2a add initial CSS styles
+814d140 add initial HTML structure and README
+f9e870c add .gitignore with standard exclusions
 ```
 
 ### `git branch --all`
 
 ```text
-  feature/command-reference
-  feature/do-not-commit-safety
-  feature/responsive-styling
 * main
+  feature/command-reference
+  feature/do-not-commit-section
+  feature/responsive-styling
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main
+  remotes/origin/feature/command-reference
+  remotes/origin/feature/do-not-commit-section
+  remotes/origin/feature/responsive-styling
 ```
