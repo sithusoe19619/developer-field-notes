@@ -1,156 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Developer Field Notes</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
+  <header class="site-header">
+    <h1>Developer Field Notes</h1>
+    <p>Practical reminders for moving through bootcamp projects with Git, GitHub, and a steady daily workflow.</p>
+  </header>
 
-    <header>
-      <h1>Developer Field Notes</h1>
-      <p class="subtitle">A personal reference guide to Git and version control habits</p>
-    </header>
-
-    <!-- Section 1: Git vs GitHub -->
-    <section id="git-vs-github">
-      <h2>Git vs. GitHub: What is the Difference?</h2>
-      <div class="card-row">
-        <div class="card">
-          <h3>Git</h3>
-          <p>
-            Git is a <strong>distributed version control system</strong> that runs entirely
-            on your local machine. It tracks every change you make to files in a project,
-            lets you roll back to previous states, and lets multiple versions of your project
-            exist side-by-side as branches. Git does not require an internet connection —
-            all of its power lives in the hidden <code>.git/</code> folder inside your project.
-          </p>
-          <p><em>Think of Git as the tool — like a camera that records every snapshot of your project.</em></p>
-        </div>
-        <div class="card">
-          <h3>GitHub</h3>
-          <p>
-            GitHub is a <strong>cloud-based hosting platform</strong> built around Git. It stores
-            your Git repositories online so you can access them from anywhere, share them with
-            others, and use extra features like Issues, Pull Requests, and GitHub Pages. GitHub
-            does not replace Git — it extends it.
-          </p>
-          <p><em>Think of GitHub as the cloud album — where you upload and share the snapshots Git took.</em></p>
-        </div>
-      </div>
+  <main>
+    <section>
+      <h2>Git vs GitHub</h2>
+      <p>Git is the local version control tool that tracks snapshots of a project on my computer. GitHub is a remote hosting service where I can store repositories online, collaborate with others, open issues, review pull requests, and deploy static sites.</p>
     </section>
 
-    <!-- Section 2: The Daily Loop -->
-    <section id="daily-loop">
-      <h2>The Daily Developer Loop</h2>
-      <p>Every coding session follows the same four-step rhythm:</p>
-      <ol class="loop-steps">
-        <li>
-          <strong>Edit</strong>
-          <span>Write or modify code in your working directory — the files you can see and open.</span>
-        </li>
-        <li>
-          <strong>Stage</strong>
-          <span>Run <code>git add &lt;file&gt;</code> to move changes into the <em>staging area</em>.
-          This is where you choose exactly what goes into your next snapshot.</span>
-        </li>
-        <li>
-          <strong>Commit</strong>
-          <span>Run <code>git commit -m "message"</code> to save a permanent snapshot of everything
-          in the staging area. A commit is like pressing Save on a level in a video game — you can
-          always come back here.</span>
-        </li>
-        <li>
-          <strong>Push</strong>
-          <span>Run <code>git push</code> to upload your commits to GitHub, keeping the remote
-          repository in sync with your local work.</span>
-        </li>
+    <section>
+      <h2>Daily Loop</h2>
+      <ol>
+        <li>Edit files in the working directory.</li>
+        <li>Stage focused changes with <code>git add</code>.</li>
+        <li>Commit the staged snapshot with a clear message.</li>
+        <li>Push commits to GitHub with <code>git push</code>.</li>
       </ol>
     </section>
 
-    <!-- Section 3: Command Reference -->
-    <section id="command-reference">
-      <h2>Git Command Reference</h2>
-      <p>Eight commands every developer uses every day:</p>
-      <ul class="command-list">
-        <li>
-          <code>git init</code>
-          <span>Initializes a brand-new Git repository in the current folder. Creates the hidden
-          <code>.git/</code> directory that tracks all history.</span>
-        </li>
-        <li>
-          <code>git status</code>
-          <span>Shows the current state of the working directory and staging area — which files
-          are modified, staged, or untracked. Run this constantly; it is your compass.</span>
-        </li>
-        <li>
-          <code>git add &lt;file&gt;</code>
-          <span>Moves a file (or changes within a file) into the staging area, queuing it for
-          the next commit. Use <code>git add .</code> to stage everything at once.</span>
-        </li>
-        <li>
-          <code>git commit -m "message"</code>
-          <span>Records a permanent snapshot of all staged changes with a descriptive message.
-          Write messages in imperative mood: "Add navigation bar", not "Added navigation bar".</span>
-        </li>
-        <li>
-          <code>git log --oneline</code>
-          <span>Displays a compact history of all commits — one line per commit with its
-          short hash and message. Great for reviewing what was done and when.</span>
-        </li>
-        <li>
-          <code>git diff</code>
-          <span>Shows the exact line-by-line differences between your working directory and the
-          last commit (or between staged and unstaged changes). Use before every commit.</span>
-        </li>
-        <li>
-          <code>git checkout -b &lt;branch-name&gt;</code>
-          <span>Creates a new branch and switches to it in one command. Branches let you
-          work on a feature in isolation without affecting <code>main</code>.</span>
-        </li>
-        <li>
-          <code>git push -u origin &lt;branch&gt;</code>
-          <span>Pushes a local branch to GitHub for the first time. The <code>-u</code> flag sets
-          the upstream tracking link so future <code>git push</code> commands know where to send commits.</span>
-        </li>
-      </ul>
+    <section>
+      <h2>Command Reference</h2>
+      <dl class="command-list">
+        <dt><code>git status</code></dt>
+        <dd>Shows changed, staged, and untracked files.</dd>
+        <dt><code>git diff</code></dt>
+        <dd>Displays unstaged changes before they are committed.</dd>
+        <dt><code>git add</code></dt>
+        <dd>Moves selected changes into the staging area.</dd>
+        <dt><code>git commit -m</code></dt>
+        <dd>Saves staged work with a short message.</dd>
+        <dt><code>git log --oneline</code></dt>
+        <dd>Shows a compact list of recent commits.</dd>
+        <dt><code>git branch</code></dt>
+        <dd>Lists branches and shows the current branch.</dd>
+        <dt><code>git checkout -b</code></dt>
+        <dd>Creates a new branch and switches to it.</dd>
+        <dt><code>git pull</code></dt>
+        <dd>Downloads and integrates remote changes.</dd>
+        <dt><code>git push</code></dt>
+        <dd>Sends local commits to the remote repository.</dd>
+      </dl>
     </section>
 
-    <!-- Section 4: Do Not Commit -->
-    <section id="do-not-commit">
+    <section>
       <h2>Things I Should Not Commit</h2>
-      <p>Some files must never enter version control. Use <code>.gitignore</code> to exclude them.</p>
-      <ul class="danger-list">
-        <li>
-          <strong>.env</strong>
-          <span>Contains environment variables — API keys, database passwords, secret tokens.
-          Committing this exposes credentials to anyone who can see the repository.</span>
-        </li>
-        <li>
-          <strong>Secrets and API keys</strong>
-          <span>Any hardcoded passwords, private keys, OAuth tokens, or service credentials.
-          Once committed, they live in the git history forever — even if you delete the file later.</span>
-        </li>
-        <li>
-          <strong>node_modules/</strong>
-          <span>The folder where npm installs packages. It can contain thousands of files and
-          hundreds of megabytes. Anyone who clones the repo can regenerate it with <code>npm install</code>.</span>
-        </li>
-        <li>
-          <strong>.DS_Store</strong>
-          <span>A hidden macOS metadata file created automatically in every folder. It is
-          machine-specific and meaningless to collaborators or the project.</span>
-        </li>
+      <ul>
+        <li><code>.env</code> files because they can contain private keys, passwords, and API tokens.</li>
+        <li>Secrets of any kind, even if they look temporary or are only used for practice.</li>
+        <li><code>node_modules</code> because dependencies can be reinstalled from package files.</li>
+        <li><code>.DS_Store</code> because it is a local macOS system file, not project source code.</li>
       </ul>
     </section>
+  </main>
 
-    <footer>
-      <p>Built by <strong>Sithu Soe</strong> &mdash; <a href="https://github.com/sithusoe19619" target="_blank">sithusoe19619</a></p>
-      <p>TTP Summer 2026 &mdash; Developer Field Notes</p>
-    </footer>
-
-  </div>
+  <footer>
+    <p>Field notes by Sithu Soe.</p>
+  </footer>
 </body>
 </html>
