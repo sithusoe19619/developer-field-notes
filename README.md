@@ -4,7 +4,7 @@ Developer Field Notes is a small personal reference site for Git commands, habit
 
 ## Live Site
 
-GitHub Pages link: To be added after deployment.
+[https://sithusoe19619.github.io/developer-field-notes](https://sithusoe19619.github.io/developer-field-notes)
 
 ## Features
 
