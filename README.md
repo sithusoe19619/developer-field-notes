@@ -1,25 +1,63 @@
 # Developer Field Notes
 
-A personal reference site for Git commands, version control concepts, and development habits — built as part of the TTP Summer 2026 Git Solo Workflow assignment.
+Developer Field Notes is a small personal reference site for Git commands, habits, and reminders to use during bootcamp.
 
 ## Live Site
 
-[https://sithusoe19619.github.io/developer-field-notes/](https://sithusoe19619.github.io/developer-field-notes/)
-
-*(Deploy link — will be live after GitHub Pages is enabled)*
+GitHub Pages link: To be added after deployment.
 
 ## Features
 
-- Explanation of the difference between Git and GitHub
-- The daily developer loop: edit, stage, commit, push
-- Reference list of 8 essential Git commands with explanations
-- "Things I Should Not Commit" — a guide to .gitignore and secrets hygiene
-- Clean, responsive CSS layout
+- Explains the difference between Git and GitHub.
+- Shows a daily edit, stage, commit, and push workflow.
+- Collects useful Git command reminders.
+- Lists files and secrets that should not be committed.
 
-## One Thing I Learned About Git
+## What I Learned
 
-Git tracks *changes*, not whole files. When you run `git add`, you are not copying a file — you are moving a diff (a set of line-level changes) into a staging area. This means you can stage only part of a file's changes using `git add -p`, giving you fine-grained control over exactly what goes into each commit.
+I learned that Git commits only save staged changes, so checking `git status` and `git diff` before committing helps keep each commit focused.
 
 ## Git Practice Evidence
 
-*(This section will be updated in Part 5 with git log output)*
+### `git log --oneline`
+
+```text
+4c57f22 Merge responsive styling improvements
+1793586 Improve responsive styling
+4523740 Merge do not commit safety section
+a6039fa Add do not commit safety section
+93c39f2 Merge command reference section
+03d4935 Add command reference section
+fb81a98 Add initial site styling
+5cd7af2 Add initial field notes page and README
+0dbbf66 Add gitignore for local files
+```
+
+### `git log --oneline --graph --all`
+
+```text
+*   4c57f22 Merge responsive styling improvements
+|\  
+| * 1793586 Improve responsive styling
+|/  
+*   4523740 Merge do not commit safety section
+|\  
+| * a6039fa Add do not commit safety section
+|/  
+*   93c39f2 Merge command reference section
+|\  
+| * 03d4935 Add command reference section
+|/  
+* fb81a98 Add initial site styling
+* 5cd7af2 Add initial field notes page and README
+* 0dbbf66 Add gitignore for local files
+```
+
+### `git branch --all`
+
+```text
+  feature/command-reference
+  feature/do-not-commit-safety
+  feature/responsive-styling
+* main
+```
