@@ -55,6 +55,7 @@
     <section>
       <h2>Things I Should Not Commit</h2>
       <ul>
+        <li><code>.env.local</code> because it often holds local overrides for environment variables that are just as sensitive as<code>.env</code>.</li>
         <li><code>.env</code> files because they can contain private keys, passwords, and API tokens.</li>
         <li>Secrets of any kind, even if they look temporary or are only used for practice.</li>
         <li><code>node_modules</code> because dependencies can be reinstalled from package files.</li>
